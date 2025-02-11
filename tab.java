@@ -8,7 +8,7 @@ public class tab {
             System.out.println("Entrer une valeur");
             t[i] = sc.nextInt();
             }
-
+            
         }
         sc.close();
 }

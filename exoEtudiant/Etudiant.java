@@ -10,24 +10,13 @@ public class Etudiant {
         this.prenom = prenom;
         this.classe = classe;
     }
-    public String getNom() {
-        return nom;
+    
+    @override
+    public String toString() {
+        return this.nom + " " + this.prenom + " (" + this.classe ;
     }
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-    public String getPrenom() {
-        return prenom;
-        }
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-    public String getClasse() {
-        return classe;
-    }
-    public void setClasse(String classe) {
-        this.classe = classe;
-    }
+   
+    
     
     
     

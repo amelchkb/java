@@ -1,0 +1,19 @@
+.label {
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(to bottom, #4A90E2, #3498DB);
+    -fx-border-color: #2980B9;
+    -fx-border-width: 4px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-border-style: solid;
+    -fx-padding: 8px 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 3);
+}
+
+.label:hover {
+    -fx-background-color: linear-gradient(to bottom, #3498DB, #12476b);
+    -fx-cursor: hand;
+}

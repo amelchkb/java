@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class GestionUtilisateurs {
     private Connection connection;
 
@@ -163,4 +164,5 @@ public class GestionUtilisateurs {
             System.out.println("Erreur lors de la modification de l'utilisateur : " + e.getMessage());
         }
     }
+
 }

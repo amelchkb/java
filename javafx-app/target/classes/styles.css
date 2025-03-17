@@ -1,19 +1,92 @@
-.label {
-    -fx-font-size: 20px;
-    -fx-text-fill: white;
-    -fx-font-style: italic;
-    -fx-font-weight: bold;
-    -fx-background-color: linear-gradient(to bottom, #4A90E2, #3498DB);
-    -fx-border-color: #2980B9;
-    -fx-border-width: 4px;
-    -fx-border-radius: 10px;
-    -fx-background-radius: 10px;
-    -fx-border-style: solid;
-    -fx-padding: 8px 12px;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 3);
+/* dark-mode.css */
+
+
+.root {
+    -fx-background-color: #2c3e50; /* Arrière-plan sombre */
+    -fx-text-fill: #ecf0f1; /* Texte clair */
 }
 
-.label:hover {
-    -fx-background-color: linear-gradient(to bottom, #3498DB, #12476b);
-    -fx-cursor: hand;
+/* Header (ligne de titre) */
+HBox {
+    -fx-background-color: #34495e; /* Bleu sombre pour l'entête */
+    -fx-background-radius: 5;
 }
+
+Label {
+    -fx-text-fill: #ecf0f1; /* Texte en blanc dans les labels */
+}
+
+/* TableView (Liste des utilisateurs) */
+.table-view {
+    -fx-background-color: #34495e; /* Fond sombre pour la table */
+    -fx-text-fill: #ecf0f1; /* Texte en blanc dans la table */
+    -fx-selection-bar: #16a085; /* Couleur de sélection en vert */
+}
+
+.table-view .column-header {
+    -fx-background-color: #2c3e50; /* Couleur de fond de l'entête de colonne */
+    -fx-text-fill: #ecf0f1; /* Texte en blanc dans l'entête */
+}
+
+.table-view .cell {
+    -fx-background-color: #34495e; /* Cellules de la table en fond sombre */
+    -fx-text-fill: #ecf0f1; /* Texte en blanc dans les cellules */
+}
+
+/* Champs de texte */
+.text-field {
+    -fx-background-color: #34495e; /* Fond sombre des champs */
+    -fx-text-fill: #ecf0f1; /* Texte clair dans les champs */
+    -fx-border-color: #7f8c8d; /* Bordure gris clair */
+    -fx-border-radius: 5;
+}
+
+/* Boutons */
+.button {
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+}
+
+.button#btnAjouter {
+    -fx-background-color: #2ecc71; /* Bouton Ajouter en vert */
+}
+
+.button#btnModifier {
+    -fx-background-color: #3498db; /* Bouton Modifier en bleu */
+}
+
+.button#btnSupprimer {
+    -fx-background-color: #e74c3c; /* Bouton Supprimer en rouge */
+}
+
+.button#btnEffacer {
+    -fx-background-color: #95a5a6; /* Bouton Effacer en gris */
+}
+
+.button:hover {
+    -fx-effect: innershadow(gaussian, rgba(255, 255, 255, 0.3), 10, 0.5, 0, 0); /* Effet au survol */
+}
+
+/* Label du formulaire */
+.label {
+    -fx-text-fill: #bdc3c7; /* Texte des labels en gris clair */
+}
+
+/* Shadow sur certains éléments */
+DropShadow {
+    -fx-color: rgba(0, 0, 0, 0.5);
+    -fx-radius: 3;
+    -fx-offset-x: 2;
+    -fx-offset-y: 2;
+}
+
+/* Contenu principal */
+.vbox, .hbox {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 5;
+}
+
+.vbox {
+    -fx-padding: 10;
+}
+

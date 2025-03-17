@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.Color?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.UtilisateurController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="572.0" prefWidth="772.0" spacing="15.0">
+         <children>
+            <!-- Header avec titre et ligne de séparation -->
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="772.0" style="-fx-background-color:rgb(139, 34, 159); -fx-background-radius: 5;">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <children>
+                  <Label text="Gestion des Utilisateurs" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.25" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </HBox>
+            
+            <!-- Contenu principal -->
+            <HBox prefHeight="500.0" prefWidth="772.0" spacing="20.0">
+               <children>
+                  <!-- TableView -->
+                  <VBox prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Label text="Liste des utilisateurs" textFill="#3498db">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TableView fx:id="tableUtilisateurs" prefHeight="450.0" prefWidth="430.0" style="-fx-background-radius: 5;">
+                           <columns>
+                              <TableColumn fx:id="colId" prefWidth="50.0" text="ID" />
+                              <TableColumn fx:id="colNom" prefWidth="100.0" text="Nom" />
+                              <TableColumn fx:id="colPrenom" prefWidth="100.0" text="Prénom" />
+                              <TableColumn fx:id="colEmail" prefWidth="180.0" text="Email" />
+                           </columns>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" width="5.0">
+                                 <color>
+                                    <Color opacity="0.1" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </TableView>
+                     </children>
+                     <effect>
+                        <DropShadow height="8.0" radius="3.5" width="8.0">
+                           <color>
+                              <Color opacity="0.1" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </VBox>
+                  
+                  <!-- Formulaire  -->
+                  <VBox prefHeight="500.0" prefWidth="300.0" spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <Label text="Formulaire" textFill="#3498db">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        
+                        <!-- Champs du formulaire -->
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="ID:" textFill="#555555">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtId" editable="false" prefHeight="35.0" prefWidth="260.0" style="-fx-background-radius: 5;" />
+                           </children>
+                        </VBox>
+                        
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="Nom:" textFill="#555555">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtNom" prefHeight="35.0" prefWidth="260.0" style="-fx-background-radius: 5;" />
+                           </children>
+                        </VBox>
+                        
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="Prénom:" textFill="#555555">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtPrenom" prefHeight="35.0" prefWidth="260.0" style="-fx-background-radius: 5;" />
+                           </children>
+                        </VBox>
+                        
+                        <VBox spacing="5.0">
+                           <children>
+                              <Label text="Email:" textFill="#555555">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtEmail" prefHeight="35.0" prefWidth="260.0" style="-fx-background-radius: 5;" />
+                           </children>
+                        </VBox>
+                        
+                        <!-- Boutons d'action -->
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="260.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="btnAjouter" mnemonicParsing="false" onAction="#ajouterUtilisateur" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: #2ecc71; -fx-background-radius: 5;" text="Ajouter" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="5.0" radius="2.0" width="5.0">
+                                       <color>
+                                          <Color opacity="0.2" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnModifier" mnemonicParsing="false" onAction="#modifierUtilisateur" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: #3498db; -fx-background-radius: 5;" text="Modifier" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="5.0" radius="2.0" width="5.0">
+                                       <color>
+                                          <Color opacity="0.2" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Button>
+                           </children>
+                        </HBox>
+                        
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="260.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="btnSupprimer" mnemonicParsing="false" onAction="#supprimerUtilisateur" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 5;" text="Supprimer" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="5.0" radius="2.0" width="5.0">
+                                       <color>
+                                          <Color opacity="0.2" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnEffacer" mnemonicParsing="false" onAction="#effacerChamps" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: #95a5a6; -fx-background-radius: 5;" text="Effacer" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="5.0" radius="2.0" width="5.0">
+                                       <color>
+                                          <Color opacity="0.2" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <effect>
+                        <DropShadow height="8.0" radius="3.5" width="8.0">
+                           <color>
+                              <Color opacity="0.1" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
